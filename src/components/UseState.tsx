@@ -37,15 +37,10 @@ const UseState = () => {
   const [macDevices, setMacDevices] = useState([{ name: 'Mac book' }])
   const newDevice = () => (Math.random() > 0.5 ? 'Mac book' : 'iPhone')
   const addDevice = () => {
-    setMacDevices((currentMacDevices) => [
-      ...currentMacDevices,
-      { name: newDevice() },
-    ])
+    setMacDevices((currentMacDevices) => [...currentMacDevices, { name: newDevice() }])
   }
   const deleteDevice = (index: number) => {
-    setMacDevices((currentMacDevices) =>
-      currentMacDevices.filter((_, i) => i !== index)
-    )
+    setMacDevices((currentMacDevices) => currentMacDevices.filter((_, i) => i !== index))
   }
   // オブジェクトと同様に以下関数だとstateが更新されない。新しい配列をdispatchに渡す必要がある
   const wrongAddDevice = () => {
@@ -84,9 +79,7 @@ const UseState = () => {
             <li key={index}>
               {device.name}
               <button onClick={() => deleteDevice(index)}>Delete</button>
-              <button onClick={() => wrongDeleteDevice(index)}>
-                Wrong delete
-              </button>
+              <button onClick={() => wrongDeleteDevice(index)}>Wrong delete</button>
             </li>
           ))}
         </ul>
