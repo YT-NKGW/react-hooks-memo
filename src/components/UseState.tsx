@@ -84,6 +84,9 @@ const UseState = () => {
           ))}
         </ul>
       </>
+      <p>
+        <a href="https://github.com/YT-NKGW/react-hooks-memo/blob/main/src/components/UseState.tsx">Source code</a>
+      </p>
     </>
   )
 }
