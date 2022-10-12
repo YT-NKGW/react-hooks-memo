@@ -30,6 +30,8 @@ const NoMemoChild = ({ count }: MemoChildType) => {
 }
 
 const Memo = () => {
+  console.log('Render Memo component')
+
   const [count, setCount] = useState(0)
   const [countToMemoChild, setCountToMemoChild] = useState(0)
   const [countToNoMemoChild, setCountToNoMemoChild] = useState(0)
