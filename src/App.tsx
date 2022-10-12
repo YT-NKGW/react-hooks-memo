@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react'
 
 import UseState from './components/UseState'
 import UseEffect from './components/UseEffect'
+import UseRef from './components/UseRef'
 import './App.css'
 
 function App() {
   const RenderableComponents = {
     [UseState.name]: { component: <UseState /> },
     [UseEffect.name]: { component: <UseEffect /> },
+    [UseRef.name]: { component: <UseRef /> },
   } as const
   type RenderableComponentType = typeof RenderableComponents[keyof typeof RenderableComponents]
 
