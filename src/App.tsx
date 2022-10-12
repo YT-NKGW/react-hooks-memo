@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import UseState from './components/UseState'
 import UseEffect from './components/UseEffect'
 import UseRef from './components/UseRef'
+import Memo from './components/Memo'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     [UseState.name]: { component: <UseState /> },
     [UseEffect.name]: { component: <UseEffect /> },
     [UseRef.name]: { component: <UseRef /> },
+    [Memo.name]: { component: <Memo /> },
   } as const
   type RenderableComponentType = typeof RenderableComponents[keyof typeof RenderableComponents]
 
