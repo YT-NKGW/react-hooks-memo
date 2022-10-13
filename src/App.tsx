@@ -5,6 +5,7 @@ import UseEffect from './components/UseEffect'
 import UseRef from './components/UseRef'
 import Memo from './components/Memo'
 import UseCallback from './components/UseCallback'
+import UseMemo from './components/UseMemo'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     [UseRef.name]: { component: <UseRef /> },
     [Memo.name]: { component: <Memo /> },
     [UseCallback.name]: { component: <UseCallback /> },
+    [UseMemo.name]: { component: <UseMemo /> },
   } as const
   type RenderableComponentType = typeof RenderableComponents[keyof typeof RenderableComponents]
 
